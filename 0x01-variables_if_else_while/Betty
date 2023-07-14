@@ -1,0 +1,3 @@
+#!/bin/bash
+newest_file="$(find . -type f -printf '%T@ %p\n' | sort -r | head -n1 | cut -f2- -d" ")"
+betty "$newest_file"
