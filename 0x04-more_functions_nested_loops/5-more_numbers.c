@@ -16,6 +16,7 @@ void more_numbers(void)
 
 	while(k < 10)
 	{
+		i = '0';
 		for (; i <= '9'; i++)
 		{
 			_putchar(i);
