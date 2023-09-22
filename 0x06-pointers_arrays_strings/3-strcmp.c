@@ -21,10 +21,10 @@ int _strcmp(char *s1, char *s2)
 		}
 		else if (s1[i] < s2[i])
 		{
-			return (i * -1);
+			return ((int)s1[i] - (int)s2[i]);
 		}
 		else
-			return (i * 1);
+			return ((int)s1[i] - (int)s2[i]);
 	}
 	return (0);
 }
