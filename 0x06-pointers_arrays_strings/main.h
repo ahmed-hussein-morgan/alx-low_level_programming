@@ -1,6 +1,9 @@
 #ifndef HEADER_H_
 #define HEADER_H_
 
+#include <stdlib.h>
+#include <stdio.h>
+
 int _putchar(char c);
 char *_strcat(char *dest, char *src);
 char *_strncat(char *dest, char *src, int n);
