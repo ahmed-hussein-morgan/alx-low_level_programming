@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 	else
 	{
 		/*printf("%i\n", ((int) argv[2] * (int) argv[3]));*/
-		printf("%i\n", ( atoi(argv[1]) * atoi(argv[2])));
+		printf("%i\n", (atoi(argv[1]) * atoi(argv[2])));
 	}
 	return (0);
 }
