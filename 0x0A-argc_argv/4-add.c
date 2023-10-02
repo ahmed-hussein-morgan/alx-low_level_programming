@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdlib.h>
-#include <ctype.h>
 /**
  * main - Entry point
  * @argc: the number of arguments
@@ -19,11 +18,6 @@ int main(int argc, char *argv[])
 	for (i = 0; i < argc; i++)
 	{
 		if (atoi(argv[i]) < 0)
-		{
-			printf("Error\n");
-			return (1);
-		}
-		else if (!atoi(argv[i]))
 		{
 			printf("Error\n");
 			return (1);
