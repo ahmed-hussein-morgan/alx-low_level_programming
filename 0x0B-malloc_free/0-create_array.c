@@ -1,13 +1,14 @@
 #include "main.h"
 /**
- * main - Entry point
- * @argc: the number of arguments
- * @argv: the array of arguments
- * Return: Always 0 (Success)
+ * create_array - creates an array of chars initialized with specific char
+ * @size: size of array
+ * @c: the char
+ * Return: a pointer to allocated memory
 */
 char *create_array(unsigned int size, char c)
 {
 	char *s;
+	unsigned int i = 0;
 
 	if (size == 0)
 	{
@@ -18,9 +19,11 @@ char *create_array(unsigned int size, char c)
 	{
 		return (NULL);
 	}
-	else
+	for (; i < size; i++)
 	{
-		*s = c;
-		return (s);
+		s[i] = c;
+		/*i++;*/
+		/*s++;*/
 	}
+	return (s);
 }
