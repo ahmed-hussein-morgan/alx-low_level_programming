@@ -3,10 +3,9 @@
  * main - Entry point
  * Return: Always 0 (Success)
 */
-#define NAME "2-main.c"
 
 int main(void)
 {
-	printf("%s\n", NAME);
+	printf("%s\n", __FILE__);
 	return (0);
 }
