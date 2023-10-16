@@ -5,15 +5,19 @@
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *ptr;
+	dog_t *ptr1;
+	dog_t *ptr2;
 
-	ptr = malloc(sizeof(dog_t));
-	if (!ptr)
+	ptr1 = malloc(sizeof(dog_t));
+	ptr2 = malloc(sizeof(dog_t));
+
+	if (ptr1 == NULL || ptr2 == NULL)
 	{
+		/*free(ptr);*/
 		return(NULL);
 	}
-	ptr->name = name;
-	ptr-> age = age;
-	ptr->owner = owner;
-	return (ptr);
+	ptr2->name = name;
+	ptr2-> age = age;
+	ptr2->owner = owner;
+	return (ptr2);
 }
