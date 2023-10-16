@@ -20,8 +20,8 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	}
 	va_start(arglist, n);
 
-        while (i < n)
-        {
+	while (i < n)
+	{
 		str = va_arg(arglist, char *);
 		if (str != NULL)
 		{
@@ -31,13 +31,13 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		{
 			printf("(nil)");
 		}
-                if (separator != NULL && i != (n - 1))
-                {
-                        printf("%s", separator);
-                }
-                i++;
-        }
-        printf("\n");
+		if (separator != NULL && i != (n - 1))
+		{
+			printf("%s", separator);
+		}
+		i++;
+	}
+	printf("\n");
 
-        va_end(arglist);
+	va_end(arglist);
 }
