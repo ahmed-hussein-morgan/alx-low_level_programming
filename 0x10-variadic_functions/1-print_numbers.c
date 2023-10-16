@@ -19,11 +19,11 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	}
 	va_start(arglist, n);
 
-	while(i < (n-1))
+	while (i < (n - 1))
 	{
 		/*confirm the below print %s and int arg*/
 		printf("%i", va_arg(arglist, unsigned int));
-		if(separator != NULL)
+		if (separator != NULL)
 		{
 			printf("%s", separator);
 		}
