@@ -1,5 +1,11 @@
 #include "variadic_functions.h"
 
+/**
+ * print_all - print all arguments
+ * @format: the print format
+ * Return: NO return value
+*/
+
 void print_all(const char * const format, ...)
 {
 	unsigned int i = 0;
@@ -12,8 +18,7 @@ void print_all(const char * const format, ...)
 	{
 	while (format[i])
 	{
-		/*switch (format[i] == 'c' || format[i] == 'i' || format[i] == 'f' || format[i] == 's')*/
-		switch(format[i])
+		switch (format[i])
 		{
 			case 'c':
 				printf("%s%c", seperator, va_arg(arglist, int));
@@ -26,7 +31,7 @@ void print_all(const char * const format, ...)
 				break;
 			case 's':
 				str = va_arg(arglist, char *);
-				if(!str)
+				if (!str)
 				{
 					str = "(nil)";
 				}
