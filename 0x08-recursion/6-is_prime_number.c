@@ -1,4 +1,28 @@
 #include "main.h"
+#include <math.h>
+
+/**
+ * check_divisibility - check if the number n is divisible by any number up to i
+ * @n: the number
+ * @i: the current divisor
+ * Return: 0 if n is divisible by any number up to i, 1 otherwise
+*/
+int check_divisibility(int n, int i)
+{
+    if (i > sqrt(n))
+    {
+        return 1;
+    }
+    else if (n % i == 0 || n % (i + 2) == 0)
+    {
+        return 0;
+    }
+    else
+    {
+        return check_divisibility(n, i + 6);
+    }
+}
+
 /**
  * is_prime_number - check if the number is prime
  * @n: the number
@@ -6,8 +30,6 @@
 */
 int is_prime_number(int n)
 {
-	int i = 5;
-
     if (n <= 1)
     {
         return 0;
@@ -20,17 +42,8 @@ int is_prime_number(int n)
     {
         return 0;
     }
-
-    /*int i = 5;*/
-    while (i * i <= n)
+    else
     {
-        if (n % i == 0 || n % (i + 2) == 0)
-        {
-            return 0;
-        }
-        i += 6;
+        return check_divisibility(n, 5);
     }
-
-    return 1;
-
 }
