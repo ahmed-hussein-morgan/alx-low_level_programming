@@ -6,21 +6,31 @@
 */
 int is_prime_number(int n)
 {
-	int i = 2;
+	int i = 5;
 
-	if (n <= 3)
-	{
-		return (1);
-	}
-	if (i == n || n % i == 0)
-	{
-		return (0);
-	}
-	else if (n % i != 0)
-	{
-		i++;
-		is_prime_number(n);
-	}
-/* You have to create a new supported function to check the prime*/
-	return (1);
+    if (n <= 1)
+    {
+        return 0;
+    }
+    else if (n <= 3)
+    {
+        return 1;
+    }
+    else if (n % 2 == 0 || n % 3 == 0)
+    {
+        return 0;
+    }
+
+    /*int i = 5;*/
+    while (i * i <= n)
+    {
+        if (n % i == 0 || n % (i + 2) == 0)
+        {
+            return 0;
+        }
+        i += 6;
+    }
+
+    return 1;
+
 }
