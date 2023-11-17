@@ -2,10 +2,10 @@
 
 /**
  * print_list - prints all the elements of a list_t list
- * @*h: a pointer to the head of list_t
+ * @h: a pointer to the head of list_t
  * Return: the number of nodes (in sucess)
- * 	If str is NULL, print [0] (nil)
- * 	You are allowed to use printf
+ *	If str is NULL, print [0] (nil)
+ *	You are allowed to use printf
 */
 
 size_t print_list(const list_t *h)
@@ -15,10 +15,10 @@ size_t print_list(const list_t *h)
 
 	if (ptr == NULL)
 	{
-		return(0);
+		return (0);
 	}
 
-	while(ptr != NULL)
+	while (ptr != NULL)
 	{
 		if (ptr->str == NULL)
 		{
@@ -33,5 +33,5 @@ size_t print_list(const list_t *h)
 		}
 		count++;
 	}
-	return(count);
+	return (count);
 }
