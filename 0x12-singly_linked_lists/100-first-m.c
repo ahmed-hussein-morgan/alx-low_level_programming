@@ -1,6 +1,6 @@
-#include <stdio.h>
+#include<stdio.h>
 /**
- * before_main - print string before main func exec
+ * before_main - printing before the main() is excecuted
 */
 void before_main(void) __attribute__((constructor));
 void before_main(void)
