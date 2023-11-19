@@ -2,8 +2,6 @@
 
 /**
  * before_main - printing before the main() is excecuted
- *
- * Return: NO Return
 */
 
 void before_main(void) __attribute__((constructor));
