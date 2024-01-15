@@ -1,10 +1,10 @@
 #include "main.h"
 /**
- * _abs - returns the largest of 3 numbers
- * @n: third integer
+ * _atoi - returns the largest of 3 numbers
+ * @s: third integer
  * Return: largest number
 */
-int _abs(int n)
+int _atoi(char *s)
 {
 
 }
