@@ -6,9 +6,10 @@
  * Return: new node
  */
 
-hash_node_t *create_node (const char *key, const char *value)
+hash_node_t *create_node(const char *key, const char *value)
 {
 	hash_node_t *new_node = malloc(sizeof(hash_node_t));
+
 	if (!new_node)
 	{
 		return (NULL);
@@ -49,15 +50,16 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	{
 		return (0);
 	}
-
 	while (table->array[index] != NULL)
 	{
 		if (strcmp(table->array[index]->key, new_node->key) == 0)
 		{
 			/*Update the value of the existing node*/
-			free(table->array[index]->value); /*Free the old value*/
-			table->array[index]->value = strdup(new_node->value); /*Duplicate the new value*/
-			return (1); /*Indicate success*/ 
+			/*free(table->array[index]->value);*/
+			/*Free the old value above*/
+			table->array[index]->value = strdup(new_node->value);
+			/*Duplicate the new value above*/
+			return (1); /*Indicate success*/
 		}
 		if (table->array[index]->next != NULL)
 		{
@@ -70,12 +72,9 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			break;
 		}
 	}
-
 	/*If we reached the end of the list without finding a match,*/
 	/*add the new node to the list*/
 	new_node->next = table->array[index];
 	table->array[index] = new_node;
-
 return (1); /*Indicate success*/
-
 }
