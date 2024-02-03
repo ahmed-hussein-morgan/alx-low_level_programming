@@ -37,7 +37,7 @@ hash_node_t *create_node (const char *key, const char *value)
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_table_t *table = ht;
-	unsigned long int index = hash_djb2(key) % table->size;
+	unsigned long int index = hash_djb2((const unsigned char *)key) % table->size;
 	hash_node_t *new_node = create_node(key, value);
 
 	if (!index)
@@ -76,6 +76,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new_node->next = table->array[index];
 	table->array[index] = new_node;
 
-return (1); // Indicate success
+return (1); /*Indicate success*/
 
 }
